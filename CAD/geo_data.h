@@ -1,5 +1,12 @@
 #pragma once
 
+class solid;
+class face;
+class loop;
+class vertex;
+class halfedge;
+class edge;
+
 class solid
 {
 public:
@@ -9,6 +16,7 @@ public:
 	solid *pre;
 	edge *ed;
 	vertex *ver;
+	solid() : id(0), fc(NULL), ed(NULL), next(NULL), pre(NULL) {};
 };
 
 
@@ -20,7 +28,8 @@ public:
 	face *next;
 	face *pre;
 	loop *lp;
-	
+public:
+	face() : id(0), Solid(NULL), lp(NULL), next(NULL), pre(NULL) {};
 };
 
 class loop
@@ -38,15 +47,14 @@ public:
 class vertex
 {
 public:
-	int id;
 	double x;
 	double y;
 	double z;
 	vertex *next;
 	vertex *pre;
-	vertex() :id(0), next(nullptr), pre(nullptr)
+	vertex() : next(nullptr), pre(nullptr)
 	{};
-	vertex(double *coord) :id(0), next(nullptr), pre(nullptr)
+	vertex(double *coord) : next(nullptr), pre(nullptr)
 	{
 		x = coord[0];
 		y = coord[1];
@@ -70,6 +78,7 @@ public:
 	halfedge *next;
 	halfedge *pre;
 	halfedge *bro;
+	halfedge() : ed(NULL), start(NULL), end(NULL),lp(NULL), next(NULL), pre(NULL), bro(NULL) {};
 };
 
 class edge
@@ -79,4 +88,5 @@ public:
 	halfedge *r_half;
 	edge *next;
 	edge *pre;
+	edge() : l_half(NULL), r_half(NULL), next(NULL), pre(NULL) {};
 };
