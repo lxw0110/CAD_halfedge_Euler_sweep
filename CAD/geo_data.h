@@ -50,22 +50,17 @@ public:
 	double x;
 	double y;
 	double z;
+	double coord[3];
 	vertex *next;
 	vertex *pre;
 	vertex() : next(nullptr), pre(nullptr)
 	{};
-	vertex(double *coord) : next(nullptr), pre(nullptr)
+	vertex(double *c) : next(nullptr), pre(nullptr)
 	{
-		x = coord[0];
-		y = coord[1];
-		z = coord[2];
+		coord[0]=x = c[0];
+		coord[1]=y = c[1];
+		coord[2]=z = c[2];
 	};
-	bool operator==(const vertex &b)
-	{
-		if ((x == b.x)&&(y == b.y)&&(z = b.z))
-			return true;
-		return false;
-	}
 };
 
 class halfedge

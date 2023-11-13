@@ -137,13 +137,11 @@ halfedge *mev(vertex *exist_point, vertex *new_ver, loop *L)
 	}
 	else
 	{
-		halfedge *now_he = L->hfedge;
-		//std::cout << "@2\n";
+		halfedge *now_he = L->hfedge;;
 		while (now_he->next->start != exist_point)
 		{
 			now_he = now_he->next;
 		}
-		//std::cout << "@2\n";
 		he2->next = now_he->next;
 		now_he->next->pre = he2;
 		now_he->next = he1;
