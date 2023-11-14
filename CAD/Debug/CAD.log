@@ -1,2 +1,5 @@
 ﻿  main.cpp
-  CAD.vcxproj -> C:\Users\Administrator\Desktop\CAD\Debug\CAD.exe
+C:\Users\Administrator\Desktop\CAD_halfedge_Euler_sweep\CAD\main.cpp(210,21): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\Administrator\Desktop\CAD_halfedge_Euler_sweep\CAD\main.cpp(218,21): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\Administrator\Desktop\CAD_halfedge_Euler_sweep\CAD\main.cpp(222,22): warning C4018: “<”: 有符号/无符号不匹配
+  CAD.vcxproj -> C:\Users\Administrator\Desktop\CAD_halfedge_Euler_sweep\Debug\CAD.exe
